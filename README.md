@@ -33,7 +33,8 @@ Para mudar a porta do tomcat:
 - PROTÓTIPO DO CADASTRO DE TÍTULO
 	- Criação da página html e do controller
 	- Acrescentando o DevTools
- 
-      ENVIANDO DADOS AO SERVIDOR
-- Criando
-- Editando
+	
+- ENVIANDO DADOS AO SERVIDOR
+	- Criando a entidade para poder salvar no banco de dados, vamos linkar os dados da página 
+		com o servidor: Criamos o model.
+	- Editando
