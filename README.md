@@ -43,5 +43,12 @@ Para mudar a porta do tomcat:
 	- Sem ainda salvar no banco de dados vamos retornar no método uma string para que busque a view
 	onde seria o retorno para o browser
 	- Na página vamos colocar os mesmos nomes dos input's com o nome dos atributos da entidade.
+	- Alteramos o arquivo application.properties que é um arquivo dentro do sprigBoot que lê ele
+	no qual já possui várias configurações default e neste arquivo conseguimos customizar essas
+	configurações, algumas delas:
+	Ver na documentação:
+	https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+	- logging.level.root=DEBUG vamos ver o debug para todas as classes do sistema.
+	
 	
 	
