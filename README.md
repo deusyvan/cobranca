@@ -51,6 +51,7 @@ Para mudar a porta do tomcat:
 	- logging.level.root=DEBUG vamos ver o debug para todas as classes do sistema.
 	
 - CADASTRANDO UM NOVO TÍTULO
-	-
+	- Vamos começar usando nossa interface para um repositorio do nosso JPA
+	- 
 	
 	
