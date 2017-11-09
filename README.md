@@ -8,7 +8,7 @@ Curso Spring Boot - Workshop
 - THYMELEAF
 - DEVTOOLS
 
-    CRIANDO O PROJETO
+      CRIANDO O PROJETO
 - GitIgnore:
 	- *.class
 	- .DS_Store
@@ -23,7 +23,7 @@ Curso Spring Boot - Workshop
 	- .mvn*
 	- mvnw*
 
-    TOMCAT:
+      TOMCAT:
 Para mudar a porta do tomcat:
 	* No arquivo application.properties dentro do src/main/resources adicione:
 	server.port=8090
@@ -34,5 +34,5 @@ Para mudar a porta do tomcat:
 - Criação da página html e do controller
 - Acrescentando o DevTools
 
-    ENVIANDO DADOS AO SERVIDOR
+      ENVIANDO DADOS AO SERVIDOR
 - 
