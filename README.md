@@ -54,6 +54,9 @@ Para mudar a porta do tomcat:
 	- Vamos começar usando nossa interface para um repositorio do nosso JPA
 	- Por estarmos usando uma aplicação web + h2 + devtools: conseguimos acessar o console do h2:
 	http://localhost:8080/h2-console
+	- Lembrar de trocar a url do jdbc para:
+	jdbc:h2:mem:testdb
 	- Vamos configurar a aplicação para pt-BR como default para acertar a linguagem e os dados no banco
+	- Depois colocamos a validação nos atributos para ser aceito no banco de dados.
 	
 	
