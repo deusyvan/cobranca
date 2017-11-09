@@ -40,5 +40,8 @@ Para mudar a porta do tomcat:
 	- Editando o controle e criando um método para salvar no banco de dados, que recebe um objeto
 	titulo que é convertido pelo spring para salvar no banco de dados, onde é enviado via post
 	pelo RequestMapping, o spring pega os dados que vem na requisição e converte automaticamente.
-	- 
+	- Sem ainda salvar no banco de dados vamos retornar no método uma string para que busque a view
+	onde seria o retorno para o browser
+	- Na página vamos colocar os mesmos nomes dos input's com o nome dos atributos da entidade.
+	
 	
