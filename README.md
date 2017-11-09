@@ -9,20 +9,20 @@ Curso Spring Boot - Workshop
 - DEVTOOLS
 
 
-    CRIANDO O PROJETO
-- GitIgnore:
-	- *.class
-	- .DS_Store
-	- Servers/*
-	- .metadata
-	- .settings
-	- .classpath
-	- .project
-	- target/
-	- bin/
-	- rebel.xml
-	- .mvn*
-	- mvnw*
+- CRIANDO O PROJETO
+	- Cópia do nosso arquivo GitIgnore:
+		- *.class
+		- .DS_Store
+		- Servers/*
+		- .metadata
+		- .settings
+		- .classpath
+		- .project
+		- target/
+		- bin/
+		- rebel.xml
+		- .mvn*
+		- mvnw*
 
 - TOMCAT:
 Para mudar a porta do tomcat:
