@@ -50,5 +50,7 @@ Para mudar a porta do tomcat:
 	https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 	- logging.level.root=DEBUG vamos ver o debug para todas as classes do sistema.
 	
+- CADASTRANDO UM NOVO TÍTULO
+	-
 	
 	
