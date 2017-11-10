@@ -20,7 +20,7 @@
     
     <form class="form-horizontal" method="POST" action="/titulos">
     	<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
-    		<span>Título salvo com sucesso!</span>
+    		<span th:text="${mensagem}">Título salvo com sucesso!!! - que não aparece</span>
 		</div>
     	<div class="panel panel-default">
     		<div class="panel-heading">
