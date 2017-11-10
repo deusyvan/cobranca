@@ -2,15 +2,16 @@
 Curso Spring Boot - Workshop
 
 
-    COMPONENTES INICIAIS:
+#    COMPONENTES INICIAIS:
 - WEB
 - JPA
 - THYMELEAF
 - DEVTOOLS
 
 
-- CRIANDO O PROJETO
-	- Cópia do nosso arquivo GitIgnore:
+# CRIANDO O PROJETO
+	- Cópia do nosso arquivo 
+	GitIgnore:
 		- *.class
 		- .DS_Store
 		- Servers/*
@@ -30,11 +31,11 @@ Para mudar a porta do tomcat:
 	server.port=8090
 	* Para trocar para 8090 por exemplo.
 
-- PROTÓTIPO DO CADASTRO DE TÍTULO
+# PROTÓTIPO DO CADASTRO DE TÍTULO
 	- Criação da página html e do controller
 	- Acrescentando o DevTools
 	
-- ENVIANDO DADOS AO SERVIDOR
+# ENVIANDO DADOS AO SERVIDOR
 	- Criando a entidade para poder salvar no banco de dados, vamos linkar os dados da página 
 		com o servidor: Criamos o model.
 	- Editando o controle e criando um método para salvar no banco de dados, que recebe um objeto
@@ -50,7 +51,7 @@ Para mudar a porta do tomcat:
 	https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 	- logging.level.root=DEBUG vamos ver o debug para todas as classes do sistema.
 	
-- CADASTRANDO UM NOVO TÍTULO
+# CADASTRANDO UM NOVO TÍTULO
 	- Vamos começar usando nossa interface para um repositorio do nosso JPA
 	- Por estarmos usando uma aplicação web + h2 + devtools: conseguimos acessar o console do h2:
 	http://localhost:8080/h2-console
@@ -59,7 +60,7 @@ Para mudar a porta do tomcat:
 	- Vamos configurar a aplicação para pt-BR como default para acertar a linguagem e os dados no banco
 	- Depois colocamos a validação nos atributos para ser aceito no banco de dados.
 
-- MOSTRANDO A MENSAGEM DE SUCESSO
+# MOSTRANDO A MENSAGEM DE SUCESSO
 	- Configuramos uma mensagem simples de sucesso
 	- Usaremos agora o thymeleaf para dinamicamente criar apenas se tiver uma mensagem sucesso para mostrar.
 	- Adiciona o cabeçalho: xmlns:th="http://www.thymeleaf.org"
