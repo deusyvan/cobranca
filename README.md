@@ -58,5 +58,7 @@ Para mudar a porta do tomcat:
 	jdbc:h2:mem:testdb
 	- Vamos configurar a aplicação para pt-BR como default para acertar a linguagem e os dados no banco
 	- Depois colocamos a validação nos atributos para ser aceito no banco de dados.
-	
+
+- MOSTRANDO A MENSAGEM DE SUCESSO
+	- 
 	
