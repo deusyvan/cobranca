@@ -60,5 +60,11 @@ Para mudar a porta do tomcat:
 	- Depois colocamos a validação nos atributos para ser aceito no banco de dados.
 
 - MOSTRANDO A MENSAGEM DE SUCESSO
-	- 
+	- Configuramos uma mensagem simples de sucesso
+	- Usaremos agora o thymeleaf para dinamicamente criar apenas se tiver uma mensagem sucesso para mostrar.
+	- Adiciona o cabeçalho: xmlns:th="http://www.thymeleaf.org"
+	- Vamos usar o if: th:if="${!#strings.isEmpty(mensagem)}"
+	Podemos encontrar na documentação em 
+	http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#strings
+	
 	
