@@ -70,4 +70,16 @@ Para mudar a porta do tomcat:
 	
 # MONTANDO COMBO DINAMICAMENTE
 	- Trabalhar no status pra mostrar dinamicamente do objeto, iterando sobre uma coleção.
-		
+	- Primeiro fizemos adicionar no mv da chamada /novo uma list e depois percorremos na página
+	- Visto que teríamos que ficar repetindo o código nas outras chamadas modificamos com um
+	método anotado com @ModelAttribute("todosStatusTitulo") e que recebe como parametro o nome
+	do objeto que vamos interar na página, fazendo com que todos os modelAndView sejam carregados
+	com a List retornada no método que retorna um array de todosStatusTitulo: Arrays.asList(StatusTitulo.values());
+	- Melhor explicação: Quando usamos um @ModelAttribute deixamos disponível um atributo para todas as páginas.
+
+
+	
+	
+	
+	
+	

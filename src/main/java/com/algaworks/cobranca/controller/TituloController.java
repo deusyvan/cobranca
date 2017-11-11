@@ -36,7 +36,7 @@ public class TituloController {
 		return mv;
 	}
 	
-	@ModelAttribute
+	@ModelAttribute("todosStatusTitulo")
 	public List<StatusTitulo> todosStatusTitulo(){
 		return Arrays.asList(StatusTitulo.values());
 	}
