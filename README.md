@@ -76,8 +76,17 @@ Para mudar a porta do tomcat:
 	do objeto que vamos interar na página, fazendo com que todos os modelAndView sejam carregados
 	com a List retornada no método que retorna um array de todosStatusTitulo: Arrays.asList(StatusTitulo.values());
 	- Melhor explicação: Quando usamos um @ModelAttribute deixamos disponível um atributo para todas as páginas.
-
-
+	- O atributo só fica nas páginas do controller, mas se quiser disponibilizar para todas as
+	páginas do sistema poderia usar uma anotação @ControllerAdvice em uma nova classe e lá usar o @ModelAttribute por exemplo:
+	https://github.com/algaworks/curso-sistemas-web-com-spring-javascript-bootstrap/tree/master/12.3-modularizando-o-cadastro-rapido-de-estilo/brewer 
+	- Para preencher o combo com dados de uma tabela e depois salvar a chave extrangeira:
+	https://github.com/algaworks/curso-sistemas-web-com-spring-javascript-bootstrap/tree/master/9.8-iniciando-a-transacao-para-salvar-a-cerveja 
+	- @ModelAttribute você irá enviar sempre o retorno do método como um objeto para a view para este controller.
+	- @RedirectAttributes você consegue adicionar objetos também, mas eles ficam vivos (flash attributes) mesmo depois de um redirect.
+	- Testando podemos criar um outro controller e anote-o com @ControllerAdvice, ai criamos o método com o @ModelAttribute.
+	- Para autocompletar o thymeleaf: https://github.com/thymeleaf/thymeleaf-extras-eclipse-plugin 
+	
+	
 	
 	
 	
