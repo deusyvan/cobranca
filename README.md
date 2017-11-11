@@ -1,8 +1,8 @@
-# Cobranca
+# COBRANÇA
 Curso Spring Boot - Workshop
 
 
-#    COMPONENTES INICIAIS:
+# COMPONENTES INICIAIS:
 - WEB
 - JPA
 - THYMELEAF
@@ -85,7 +85,20 @@ Para mudar a porta do tomcat:
 	- @RedirectAttributes você consegue adicionar objetos também, mas eles ficam vivos (flash attributes) mesmo depois de um redirect.
 	- Testando podemos criar um outro controller e anote-o com @ControllerAdvice, ai criamos o método com o @ModelAttribute.
 	- Para autocompletar o thymeleaf: https://github.com/thymeleaf/thymeleaf-extras-eclipse-plugin 
-	
+
+# CONECTANDO AO MYSQL
+
+	- Coloque na URL de conexão, no application.properties. Se estiver ocorrendo algum warn:
+	jdbc:mysql://localhost/cobranca?useSSL=false
+	- Como configurar um pool de conexões do banco de dados: 
+	- Na documentação do Spring Boot tem uma recomendação para conectar em um banco de produção: 	
+	https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html#boot-features-connect-to-production-database 
+	- No próximo curso teremos datasource, pool de conexões, controle transacional manual e muito
+	mais.
+	- Quando temos um grande número de acessos a nossa aplicação, quanto mais conexões ao banco
+	tivermos, mais rapidamente nossa aplicação irá responder. No próximo curso de Spring já vou usar
+	Datasources com Pool de Conexões.
+		
 	
 	
 	
