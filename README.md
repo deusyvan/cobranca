@@ -68,4 +68,6 @@ Para mudar a porta do tomcat:
 	Podemos encontrar na documentação em 
 	http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#strings
 	
-	
+# MONTANDO COMBO DINAMICAMENTE
+	- Trabalhar no status pra mostrar dinamicamente do objeto, iterando sobre uma coleção.
+		
