@@ -105,3 +105,6 @@ Para mudar a porta do tomcat:
 	
 	
 	
+# PROTÓTIPO DA PESQUISA DE TÍTULOS
+	- Criando o html para o protótipo.
+	- Veremos mais usos do thymeleaf
