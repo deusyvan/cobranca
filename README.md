@@ -87,7 +87,6 @@ Para mudar a porta do tomcat:
 	- Para autocompletar o thymeleaf: https://github.com/thymeleaf/thymeleaf-extras-eclipse-plugin 
 
 # CONECTANDO AO MYSQL
-
 	- Coloque na URL de conexão, no application.properties. Se estiver ocorrendo algum warn:
 	jdbc:mysql://localhost/cobranca?useSSL=false
 	- Como configurar um pool de conexões do banco de dados: 
@@ -98,13 +97,8 @@ Para mudar a porta do tomcat:
 	- Quando temos um grande número de acessos a nossa aplicação, quanto mais conexões ao banco
 	tivermos, mais rapidamente nossa aplicação irá responder. No próximo curso de Spring já vou usar
 	Datasources com Pool de Conexões.
-		
-	
-	
-	
-	
-	
 	
 # PROTÓTIPO DA PESQUISA DE TÍTULOS
 	- Criando o html para o protótipo.
 	- Veremos mais usos do thymeleaf
+	- Usando a versão do js do curso no final até podemos fazer a atualização
