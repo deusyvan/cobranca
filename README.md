@@ -102,3 +102,8 @@ Para mudar a porta do tomcat:
 	- Criando o html para o protótipo.
 	- Veremos mais usos do thymeleaf
 	- Usando a versão do js do curso no final até podemos fazer a atualização
+	
+# TEMPLATE COM THYMELEAF
+	- Vamos usar https://github.com/ultraq/thymeleaf-layout-dialect aqui encontramos a documentação
+	não precisamos baixar pois já está no pom.xml onde configuramos no início do projeto.
+	
