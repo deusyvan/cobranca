@@ -106,4 +106,8 @@ Para mudar a porta do tomcat:
 # TEMPLATE COM THYMELEAF
 	- Vamos usar https://github.com/ultraq/thymeleaf-layout-dialect aqui encontramos a documentação
 	não precisamos baixar pois já está no pom.xml onde configuramos no início do projeto.
+	- Na documentação vemos as funcionalidades do bootstrap:
+		https://getbootstrap.com/docs/4.0/utilities/clearfix/
+		Para ajudar a consertar a página.
+	- Customizamos as páginas e os css, apontando também às classes do cleafix.
 	
