@@ -122,6 +122,8 @@ Para mudar a porta do tomcat:
 	para que transformemos um objeto em uma string: Expression Utility Objects
 		http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#strings
 	- Melhoramos a apresentação mostrando através de um método.
+	- Para mais de dois tipos de status veja o código do curso:
+		https://github.com/algaworks/curso-sistemas-web-com-spring-javascript-bootstrap
 
 # PLUGIN PARA COMPLETAR O CODIGO NO THYMELEAF
 	http://www.thymeleaf.org/ecosystem.html#thymeleaf-eclipse-plugin
