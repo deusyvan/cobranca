@@ -115,6 +115,8 @@ Para mudar a porta do tomcat:
 	- Enviando dados do controller para a view em pesquisa.
 	- Utilizando o objeto utilitário lists: th:if="${#lists.isEmpty(titulos)}" 
 	mostramos apenas se titulos estiver vazio.
+	- Usaremos o thymeleaf agora para nos ajudar a formatar a data, usando apenas duas chaves no campo
+	da data para que ele use o formato definido no model, a mesma coisa funcina para os números.
 	
 	
 	
