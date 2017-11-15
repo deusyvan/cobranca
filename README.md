@@ -122,11 +122,12 @@ Para mudar a porta do tomcat:
 	para que transformemos um objeto em uma string: Expression Utility Objects
 		http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#strings
 	- Melhoramos a apresentação mostrando através de um método.
-	
-	
-	
-	
-	
-	
+
+# PLUGIN PARA COMPLETAR O CODIGO NO THYMELEAF
+	http://www.thymeleaf.org/ecosystem.html#thymeleaf-eclipse-plugin
+		Para instalar vá em Help >> Install new Software >> e cole esse link para dowload:
+		http://www.thymeleaf.org/eclipse-plugin-update-site/
+		Ou ainda pode baixar do tipo zip: 
+		https://bintray.com/thymeleaf/downloads/thymeleaf-extras-eclipse-plugin/
 	
 	
