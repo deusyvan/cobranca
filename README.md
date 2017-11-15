@@ -121,7 +121,7 @@ Para mudar a porta do tomcat:
 	- Na documentação de objetos utilitários vamos ver como fazer a expressão de strings
 	para que transformemos um objeto em uma string: Expression Utility Objects
 		http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#strings
-	
+	- Melhoramos a apresentação mostrando através de um método.
 	
 	
 	
