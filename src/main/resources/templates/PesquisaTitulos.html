@@ -35,7 +35,9 @@
 	   					<td th:text="${titulo.descricao}" ></td>
 	   					<td class="text-center" th:text="${{titulo.dataVencimento}}" ></td>
 	   					<td class="text-right" th:text="|R$ ${{titulo.valor}}|" ></td>
-	   					<td class="text-center" th:text="${titulo.status.descricao}" ></td>
+	   					<td class="text-center">
+	   						<span class="label  label-success" th:text="${titulo.status.descricao}"></span>
+	   					</td>
 	   					<td class="text-center">
 	   						
 	   					</td>

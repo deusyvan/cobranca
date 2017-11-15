@@ -117,6 +117,8 @@ Para mudar a porta do tomcat:
 	mostramos apenas se titulos estiver vazio.
 	- Usaremos o thymeleaf agora para nos ajudar a formatar a data, usando apenas duas chaves no campo
 	da data para que ele use o formato definido no model, a mesma coisa funcina para os números.
+	- Com base no status vamos mudar sua apresentação usando bootstrap para desenhar:
+	
 	
 	
 	
