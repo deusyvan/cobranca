@@ -37,8 +37,7 @@
 	   					<td class="text-right" th:text="|R$ ${{titulo.valor}}|" ></td>
 	   					<td class="text-center">
 	   						<span class="label" th:text="${titulo.status.descricao}"
-	   							  th:classappend="${#strings.toString(titulo.status) == 'PENDENTE' ? 'label-danger' : 'label-success'}">
-	   						</span>
+	   							  th:classappend="${titulo.pendente ? 'label-danger' : 'label-success'}"></span>
 	   					</td>
 	   					<td class="text-center">
 	   						
