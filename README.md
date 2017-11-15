@@ -111,3 +111,12 @@ Para mudar a porta do tomcat:
 		Para ajudar a consertar a página.
 	- Customizamos as páginas e os css, apontando também às classes do cleafix.
 	
+# LISTANDO OS TÍTULOS	
+	- Enviando dados do controller para a view em pesquisa.
+	- 
+	
+	
+	
+	
+	
+	
