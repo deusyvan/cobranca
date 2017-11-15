@@ -42,7 +42,7 @@
 	   				</tr>
 	   			
 	   				<tr>
-	   					<td colspan="6">Nenhum título foi encontrado</td>
+	   					<td colspan="6" th:if="${#lists.isEmpty(titulos)}">Nenhum título foi encontrado</td>
 	   				</tr>
 	   			</tbody>
 	   		</table>

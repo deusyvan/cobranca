@@ -113,7 +113,9 @@ Para mudar a porta do tomcat:
 	
 # LISTANDO OS TÍTULOS	
 	- Enviando dados do controller para a view em pesquisa.
-	- 
+	- Utilizando o objeto utilitário lists: th:if="${#lists.isEmpty(titulos)}" 
+	mostramos apenas se titulos estiver vazio.
+	
 	
 	
 	
