@@ -131,5 +131,12 @@ Para mudar a porta do tomcat:
 		http://www.thymeleaf.org/eclipse-plugin-update-site/
 		Ou ainda pode baixar do tipo zip: 
 		https://bintray.com/thymeleaf/downloads/thymeleaf-extras-eclipse-plugin/
-	
+
+# PRODUTIVIDADE COM DEVTOOLS E LIVERELOAD 
+	- Já temos o devtools instalado na aplicaçao que já compila automaticamente.
+	- Usaremos o chrome o livereload para atualizar a página automaticamente sem 
+	interação do desenvolvedor:
+		Adicione ao chrome: 
+		https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+		
 	
