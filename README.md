@@ -181,6 +181,15 @@ Para mudar a porta do tomcat:
 	- @{...} monta nossos links, podendo definir variáveis depois dentro do contexto. Ainda veremos outras 
 	funcionalidades dele, criando aqui nossa url dinâmica, incluindo continuar mantendo os valores através
 	do th:field na hora da edição também.
+	- Até aqui a edição que busca os dados e entrega no formulário de cadastro, ainda não sabemos que é um
+	titulo existente, então passamos a implementar isso, colcaremos um campo oculto do codigo no cadastro:
+	<input type="hidden" th:field="*{codigo}"/>
+	- Pegamos o codigo e inserimos no campo para receber na requisição via get e usarmos para editar o 
+	titulo existente, ele estando null salvamos um novo e se existir atualizamos o atual no banco, o jpa
+	faz isso pra gente no método save: "titulos.save(titulo)"
+	
+	
+	
 	
 	
 		
