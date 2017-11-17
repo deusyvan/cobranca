@@ -191,8 +191,13 @@ Para mudar a porta do tomcat:
 	titulos.findOne(codigo);
 	Da seguinte maneira, recebendo ao inves de um codigo o título:
 	"@PathVariable("codigo") Titulo titulo"
-	
-	
+	- Ao invés de lapis deixar o codigo sublinhado para edição:
+	https://github.com/algaworks/2a-oficina-spring-framework/blob/master/video-3/aw-vinhos/src/main/resources/templates/vinho/pesquisa-vinhos.html
+	- Para mostrar os sql no console colocar no application.properties:
+	spring.jpa.show-sql=true 
+	- Outra forma de pegar o codigo:
+	<a class="btn btn-link btn-xs" th:href="|/titulos/${titulo.codigo}|"> 
+		
 	
 	
 	
