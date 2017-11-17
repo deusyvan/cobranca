@@ -175,6 +175,8 @@ Para mudar a porta do tomcat:
 	- O método editar recebe uma variavel path do caminho por isso a anotação "@PathVariable Long codigo"
 	para transformar o parametro.
 	- Nosso método está recebendo o codigo via get e redirecionando a "/titulos/novo".
+	- Alterando o metodo passamos a receber o titulo na view mas um titulo fixo.
+	
 		
 		
 	

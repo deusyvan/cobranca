@@ -57,8 +57,9 @@ public class TituloController {
 	
 	@RequestMapping("{codigo}")
 	public ModelAndView edicao(@PathVariable Long codigo) {
-		System.out.println(">>>>>> codigo recebido:" + codigo);
-		ModelAndView mv = new ModelAndView("redirect:/titulos/novo");
+		Titulo titulo = titulos.findOne(codigo);
+		ModelAndView mv = new ModelAndView(CADASTRO_VIEW);
+		mv.addObject(titulo);
 		return mv;
 	}
 	
