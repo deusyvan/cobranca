@@ -29,7 +29,7 @@ public class Titulo {
 	@Temporal(TemporalType.DATE)
 	private Date dataVencimento;
 	
-	@NotNull //Bean Validation
+	@NotNull(message = "Valor não pode ser nulo!") //Bean Validation
 	@NumberFormat(pattern = "#,##0.00")
 	private BigDecimal valor;
 	
