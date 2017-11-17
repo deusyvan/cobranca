@@ -167,7 +167,13 @@ Para mudar a porta do tomcat:
 	- Melhoramos o código faremos que o método retorne ao invés de um ModelAndView uma String e 
 	retiramos todos os ModelAndView do nosso método. 
 	
-			
+# IMPLEMENTANDO A EDIÇÃO
+	- Inserimos na pesquisa nosso icone de edição: glyphicon-pencil
+	- Editaremos o controler para apontar para uma requisição do tipo get, lembrando que não podemos
+	ter @RequestMapping iguais, por isso faremos esta diferenciação:
+	@RequestMapping("{codigo}")
+	- O método editar recebe uma variavel path do caminho por isso a anotação "@PathVariable Long codigo"
+	para transformar o parametro.
 		
 		
 	
