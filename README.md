@@ -176,6 +176,8 @@ Para mudar a porta do tomcat:
 	para transformar o parametro.
 	- Nosso método está recebendo o codigo via get e redirecionando a "/titulos/novo".
 	- Alterando o metodo passamos a receber o titulo na view mas um titulo fixo.
+	- Passamos a receber o codigo do titulo preenchido com dados do banco, e vamos usar a expression
+	@{...} para fazer referencia ao link da url.
 	
 		
 		
