@@ -178,6 +178,10 @@ Para mudar a porta do tomcat:
 	- Alterando o metodo passamos a receber o titulo na view mas um titulo fixo.
 	- Passamos a receber o codigo do titulo preenchido com dados do banco, e vamos usar a expression
 	@{...} para fazer referencia ao link da url.
+	- @{...} monta nossos links, podendo definir variáveis depois dentro do contexto. Ainda veremos outras 
+	funcionalidades dele, criando aqui nossa url dinâmica, incluindo continuar mantendo os valores através
+	do th:field na hora da edição também.
+	
 	
 		
 		
