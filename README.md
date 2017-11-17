@@ -187,6 +187,11 @@ Para mudar a porta do tomcat:
 	- Pegamos o codigo e inserimos no campo para receber na requisição via get e usarmos para editar o 
 	titulo existente, ele estando null salvamos um novo e se existir atualizamos o atual no banco, o jpa
 	faz isso pra gente no método save: "titulos.save(titulo)"
+	- Melhorando o código o spring sabe, se estivermos usando jpa, evitando a necessidade de fazer um
+	titulos.findOne(codigo);
+	Da seguinte maneira, recebendo ao inves de um codigo o título:
+	"@PathVariable("codigo") Titulo titulo"
+	
 	
 	
 	
