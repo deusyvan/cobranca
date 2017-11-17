@@ -22,12 +22,14 @@ import com.algaworks.cobranca.repository.Titulos;
 @RequestMapping("/titulos")
 public class TituloController {
 
+	private static final String CADASTRO_VIEW = "CadastroTitulo";
+	
 	@Autowired
 	private Titulos titulos;
 	
 	@RequestMapping("novo")
 	public ModelAndView novo() {
-		ModelAndView mv = new ModelAndView("CadastroTitulo");
+		ModelAndView mv = new ModelAndView(CADASTRO_VIEW);
 		mv.addObject(new Titulo());
 		return mv;
 	}
@@ -36,7 +38,7 @@ public class TituloController {
 	public String salvar(@Validated Titulo titulo, Errors errors, RedirectAttributes attributes) {
 		
 		if(errors.hasErrors()) {
-			return "CadastroTitulo";//Retornando o nome da view
+			return CADASTRO_VIEW;//Retornando o nome da view
 		}
 		
 		titulos.save(titulo);
@@ -56,7 +58,7 @@ public class TituloController {
 	@RequestMapping("{codigo}")
 	public ModelAndView edicao(@PathVariable Long codigo) {
 		System.out.println(">>>>>> codigo recebido:" + codigo);
-		ModelAndView mv = new ModelAndView();
+		ModelAndView mv = new ModelAndView("redirect:/titulos/novo");
 		return mv;
 	}
 	
