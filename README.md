@@ -157,7 +157,9 @@ Para mudar a porta do tomcat:
 	- Executado no servidor. Validação no bean: Entidade com meta informações
 	- Mostrar a mensagem de erro ao usuario: o spring já cria um objeto chamado Errors
 	 		
-		
+# MANTENDO OS VALORES NO FORMULÁRIO
+	- Usando o th:field conseguimos manter os dados no formulário.
+			
 		
 		
 	
