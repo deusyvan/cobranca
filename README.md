@@ -153,7 +153,9 @@ Para mudar a porta do tomcat:
 		Message Expression: #{...}    >>>>>    recuperar properties para mensagens (Internacionalização)
 		Link URL Expression: @{...}     >>>>>>  href=""   Melhorar as referências quando estiver em outro contexto.
 		 
-		
+# VALIDAÇÕES COM BEAN VALIDATION
+	- Executado no servidor. Validação no bean: Entidade com meta informações
+			
 		
 		
 		
