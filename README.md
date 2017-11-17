@@ -138,5 +138,34 @@ Para mudar a porta do tomcat:
 	interação do desenvolvedor:
 		Adicione ao chrome: 
 		https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
+
+# EXPRESSÕES DO THYMELEAF
+	- Documentação capitulo 4: sintaxes
+		Expressões de variáveis: "${titulos}"    >>>     "titulos"
+		th:each
+		th:text
+		${{   }}   >>>   formatar de acordo com o formato definido no model
+		th:classappen    adiciona uma classe
+		th:if     >>>>  só vai renderizar se a expressão for verdadeira
+		#lists   >>>>  Objetos Úteis  Expressions Utility Objects dentro de uma expressão do thymeleaf "${     }"
+		
+		Selection Variable Expression *{...}  >>>> para os cadastros manter valores
+		Message Expression: #{...}    >>>>>    recuperar properties para mensagens (Internacionalização)
+		Link URL Expression: @{...}     >>>>>>  href=""   Melhorar as referências quando estiver em outro contexto.
+		 
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
 	
