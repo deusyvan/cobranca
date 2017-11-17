@@ -164,7 +164,8 @@ Para mudar a porta do tomcat:
 	"titulos/novo". 
 	- Vamos usar o RedirectAttributes para levar atributos para um novo redirect, no nosso caso
 	a mensagem e mostrar a mensagem de sucesso.
-	
+	- Melhoramos o código faremos que o método retorne ao invés de um ModelAndView uma String e 
+	retiramos todos os ModelAndView do nosso método. 
 	
 			
 		
