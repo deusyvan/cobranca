@@ -41,7 +41,7 @@ public class TituloController {
 		titulos.save(titulo);
 		
 		mv.addObject("mensagem", "Titulo salvo com sucesso!");
-		return mv;
+		return new ModelAndView("redirect:/titulos/novo");
 	}
 	
 	@RequestMapping

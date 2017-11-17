@@ -159,6 +159,10 @@ Para mudar a porta do tomcat:
 	 		
 # MANTENDO OS VALORES NO FORMULÁRIO
 	- Usando o th:field conseguimos manter os dados no formulário.
+	- Usaremos o redirect para limpar os dados do formulário. Retornando o status 302 no http,
+	redirecionando para uma outra página, fazendo com que o browser faça uma nova requisição para
+	"titulos/novo". 
+	
 			
 		
 		
