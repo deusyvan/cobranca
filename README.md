@@ -155,7 +155,8 @@ Para mudar a porta do tomcat:
 		 
 # VALIDAÇÕES COM BEAN VALIDATION
 	- Executado no servidor. Validação no bean: Entidade com meta informações
-			
+	- Mostrar a mensagem de erro ao usuario: o spring já cria um objeto chamado Errors
+	 		
 		
 		
 		
