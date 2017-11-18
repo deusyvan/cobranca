@@ -252,6 +252,14 @@ Para mudar a porta do tomcat:
 	'Tem certeza que deseja excluir o título <strong>' + descricaoTitulo + '</strong>?'
 	Ou seja:
 	modal.find('.modal-body span').html('Tem certeza que deseja excluir o título <strong>' + descricaoTitulo + '</strong>?');
+	- Agora vamos adicionar uma mensagem que o titulo foi excluído com sucesso, apenas colocando um
+	attributes como parametro no metodo excluir do nosso controller e chamando a mensagem:
+	attributes.addFlashAttribute("mensagem", "Titulo excluído com sucesso!");
+	E na tela de pesquisa vamos colocar a renderização da mensagem como no cadastro:
+	<div layout:include="Mensagem"></div>
+	É claro que teremos outro tipo de html para mensagens excluídas:
+	Faremos algumas alterações para isso nos dois html das mensagens dividindo suas funções.
+	
 	
 	
 	
