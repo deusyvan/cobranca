@@ -198,7 +198,10 @@ Para mudar a porta do tomcat:
 	- Outra forma de pegar o codigo:
 	<a class="btn btn-link btn-xs" th:href="|/titulos/${titulo.codigo}|"> 
 		
+# IMPLEMENTANDO A EXCLUSÃO
+	- Vamos usar o modal para confirmação da exclusão, com javascript.
 	
+		
 	
 	
 	
