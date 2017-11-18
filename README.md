@@ -211,14 +211,24 @@ Para mudar a porta do tomcat:
 	public void excluir(@PathVariable Long codigo) {
 	titulos.delete(codigo);
 	}
-	- Até o momento estamos excluindo de forma estática, passaremos a excluir dinamicamente usando javascript.
+	- Até o momento estamos excluindo de forma estática, passaremos a excluir dinamicamente usando javascript, para pegar o codigo de cada uma delas junto com a descrição.
 	- Criando o js:
-	- Pegamos o id e toda vez que show.bs.modal aconter vamos executar essa função:
+	- Pegamos o id e toda vez que o evento show.bs.modal aconter vamos executar essa função:
 	$('#confirmacaoExclusaoModal').on('show.bs.modal', function(event){
 	
 	});
 	Documentação:  
 	https://getbootstrap.com/docs/4.0/components/modal/
+	- A execução da função:
+	Pegamos o código através de um truque: th:attr="data-codigo=${titulo.codigo}"
+	No js ele vai substituir "th:attr" por "data-codigo" daí podemos trata-lo no js
+	No js vamos pegar o botão que disparou o evento recebido como parametro na função function(event):
+	var button = $(event.relatedTarget);
+	A variavel button é do tipo jquery daí podemos usar a função para pegar nosso código que veio nela, ou seja os atributos do data que foi definido anteriormente no html "data-codigo":
+	var codigoTitulo = button.data('codigo');
+	Para ver o codigo aparecendo vemos aqui: alert(codigoTitulo); 
+	- Teremos que adicionar o js na página:
+	
 	
 		
 	
