@@ -226,8 +226,24 @@ Para mudar a porta do tomcat:
 	var button = $(event.relatedTarget);
 	A variavel button é do tipo jquery daí podemos usar a função para pegar nosso código que veio nela, ou seja os atributos do data que foi definido anteriormente no html "data-codigo":
 	var codigoTitulo = button.data('codigo');
-	Para ver o codigo aparecendo vemos aqui: alert(codigoTitulo); 
+	Para ver o codigo aparecendo no browser vemos aqui: alert(codigoTitulo); 
 	- Teremos que adicionar o js na página:
+	<script src="/js/cobranca.js"></script>  que por acaso foi colocado no LayoutPadrao
+	- Iremos agora editar a url para tratarmos no js, para isso vamos pegar o modal e transformá-lo em um objeto do jquery:
+	var modal = $(this);
+	- E através desse objeto conseguimos pegar o formulario:
+	var form = modal.find('form');
+	- E através desse objeto tambem pegamos o action do formulario:
+	var action = form.attr('action');   ou seja a nossa string que é a nossa url.
+	- Daí usamos esse truque se a action não terminar com barra ('/') vamos colocar uma senão não colocamos:
+	if(!action.endsWith('/')){
+		action += '/';
+	}
+	- Esse truque evita uma url com duas barras evitando erros no js.
+	- Agora no formulário em nosso atributo action vamos editar colocando o action + o codigo:
+	form.attr('action', action + codigoTitulo);
+	- Então teremos nossa url pronta ex: "/titulos/5" para fazer nosso submit, com o codigo correto para exclusão.
+	
 	
 	
 		
