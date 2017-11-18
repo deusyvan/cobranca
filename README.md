@@ -206,7 +206,12 @@ Para mudar a porta do tomcat:
 	pois vai mapear no controller como delete, pois se colocar delete no formulario pode não aceitar.
 	- Vamos mapear o metodo DELETE no controller:
 	@RequestMapping(method = RequestMethod.DELETE)
-	
+	- Recebendo um codigo no path via delete vamos cair no metodo excluir, que vamos receber no parametro
+	- Recebemos o codigo sem precisar converter para titulo porque já podemos excluir direto através do código:
+	public void excluir(@PathVariable Long codigo) {
+	titulos.delete(codigo);
+	}
+	 
 	
 		
 	
