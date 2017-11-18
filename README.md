@@ -259,6 +259,37 @@ Para mudar a porta do tomcat:
 	<div layout:include="Mensagem"></div>
 	É claro que teremos outro tipo de html para mensagens excluídas:
 	Faremos algumas alterações para isso nos dois html das mensagens dividindo suas funções.
+	- A função do atributo tabindex com o valor -1:
+	É para que a tag não seja levada em consideração quando o usuário clicar na tecla "TAB". 
+	Mas, não afeta o funcionamento da aplicação.
+	O tabindex=0 coloca o elemento para receber o foco na ordem em que ele está na página.
+	- Para colocar o botão X para fechar o Dialog, podemos usar um button assim:
+	<button type="button" class="close" data-dismiss="modal"
+	   aria-label="Close">
+	     <span aria-hidden="true">&times;</span>
+	</button>
+	O mesmo funcionaria para fechar os alerts, apenas temos que mudar o data-dismiss para alert. 
+	- Para os alerts fecharem sozinhos depois de um tempo:
+	http://stackoverflow.com/questions/23101966/bootstrap-alert-auto-close
+	- Outra forma:
+	/* Botão fechar no dialog... ;-) */
+	<div class="modal-header">
+	   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	      <span aria-hidden="true">&times;</span>
+	   </button>
+	   <h4 class="modal-title">Você tem certeza?</h4>
+	</div>
+	- Arrumando o codigo do curso para o botao excluir:
+	 <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+      </button>
+      <h4 class="modal-title">Você tem certeza?</h4>
+   	</div>
+   	
+	
+	
+	
 	
 	
 	
