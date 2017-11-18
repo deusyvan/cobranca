@@ -243,6 +243,18 @@ Para mudar a porta do tomcat:
 	- Agora no formulário em nosso atributo action vamos editar colocando o action + o codigo:
 	form.attr('action', action + codigoTitulo);
 	- Então teremos nossa url pronta ex: "/titulos/5" para fazer nosso submit, com o codigo correto para exclusão.
+	- Para colocarmos uma mensagem personalizada do titulo que queremos excluir vamos pegar a descrição no js:
+	var descricaoTitulo = button.data('descricao');
+	- Para o html disponibilizar isso pra gente vamos separar por virgula mais um atributo na nossa página de pesquisa:
+	th:attr="data-codigo=${titulo.codigo}, data-descricao=${titulo.descricao}">
+	Fazendo com que deixemos disponível a descrição no nosso js.
+	- No diálogo de confirmação vamos colocá-lo assim, acrescentando no nosso modal encontrado pela classe "modal-body" onde tiver um span substituiremos pelo html:
+	'Tem certeza que deseja excluir o título <strong>' + descricaoTitulo + '</strong>?'
+	Ou seja:
+	modal.find('.modal-body span').html('Tem certeza que deseja excluir o título <strong>' + descricaoTitulo + '</strong>?');
+	
+	
+	
 	
 	
 	
