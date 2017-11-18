@@ -201,7 +201,10 @@ Para mudar a porta do tomcat:
 # IMPLEMENTANDO A EXCLUSÃO
 	- Vamos usar o modal para confirmação da exclusão, com javascript.
 	- Criamos um include em pesquisa.
-	- 
+	- Para o bootstrap fazer aparecer o modal ele usa umas as formas como o "data":
+	- Coloca <input type="hidden" name="_method" value="DELETE"></input>
+	pois vai mapear no controller como delete, pois se colocar delete no formulario pode não aceitar.
+	
 		
 	
 	
