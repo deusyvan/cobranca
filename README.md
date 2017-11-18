@@ -200,7 +200,8 @@ Para mudar a porta do tomcat:
 		
 # IMPLEMENTANDO A EXCLUSÃO
 	- Vamos usar o modal para confirmação da exclusão, com javascript.
-	
+	- Criamos um include em pesquisa.
+	- 
 		
 	
 	
