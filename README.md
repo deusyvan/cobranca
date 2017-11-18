@@ -211,7 +211,14 @@ Para mudar a porta do tomcat:
 	public void excluir(@PathVariable Long codigo) {
 	titulos.delete(codigo);
 	}
-	 
+	- Até o momento estamos excluindo de forma estática, passaremos a excluir dinamicamente usando javascript.
+	- Criando o js:
+	- Pegamos o id e toda vez que show.bs.modal aconter vamos executar essa função:
+	$('#confirmacaoExclusaoModal').on('show.bs.modal', function(event){
+	
+	});
+	Documentação:  
+	https://getbootstrap.com/docs/4.0/components/modal/
 	
 		
 	
