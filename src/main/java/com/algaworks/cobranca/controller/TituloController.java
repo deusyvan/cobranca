@@ -62,6 +62,11 @@ public class TituloController {
 		return mv;
 	}
 	
+	@RequestMapping(method = RequestMethod.DELETE)
+	public void excluir() {
+		
+	}
+	
 	@ModelAttribute("todosStatusTitulo")
 	public List<StatusTitulo> todosStatusTitulo(){
 		return Arrays.asList(StatusTitulo.values());
