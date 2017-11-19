@@ -286,7 +286,14 @@ Para mudar a porta do tomcat:
       </button>
       <h4 class="modal-title">Você tem certeza?</h4>
    	</div>
-   	
+
+# CORRIGINDO BUG EXCLUSÃO
+	- Vamos definir uma url básica no nosso data do html e chamá-ĺa no js, ou seja mudamos o action:
+	<form th:attr="data-url-base='/titulos'" method="POST">
+	- Mudamos a forma de carregar o action no js:
+	var action = form.data('url-base');
+	
+	
 	
 	
 	
