@@ -303,7 +303,29 @@ Para mudar a porta do tomcat:
 	});
 	- Nesta função quando carregar a página ele vai procurar os componentes e faça o tooltip:
 	
-	 	
+	$(function(){
+				$('[rel="tooltip"]').tooltip();
+	});
+	
+# PLUGIN PARA CALENDÁRIO
+	- bootstrap-datepicker: 	
+	Baixar três arquivos no  Edit on GitHub: 
+	https://github.com/uxsolutions/bootstrap-datepicker/blob/master/docs/index.rst
+		-	bootstrap-datepicker.min.js
+		-	bootstrap-datepicker.pt-BR.min.js
+		-	bootstrap-datepicker.standalone.min.css
+	- Agora vamos configura-los:
+	importando-os no LayoutPadrão: 
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-datepicker.standalone.min.css"/>
+	<script src="/js/bootstrap-datepicker.min.js"></script>
+	<script src="/js/bootstrap-datepicker.pt-BR.min.js"></script>
+	- Após vamos configurar editando a pagina de cadastro com alguns atributos na data:
+	<input type="text" class="form-control"	id="dataVencimento" th:field="*{dataVencimento}"
+		data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-language="pt-BR"
+		data-date-autoclose="true"  data-date-today-higlight="true"/>
+	- Agora vamos tratar a DataException:
+		- Primeiro no metodo salvar (controller) vamos colocar em volta de um try cath,
+		
 	
 	
 	
