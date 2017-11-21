@@ -293,7 +293,17 @@ Para mudar a porta do tomcat:
 	- Mudamos a forma de carregar o action no js:
 	var action = form.data('url-base');
 	
+# COMPONENTE TOOLTIP
+	- Usando o tooltip do bootstrap ver na documentação, lembrando que já estamos usando data-toogle no modal, usaremos outro atributo: 
+	title="Editar" rel="tooltip" data-placement="top"
+	- Teremos que ativa via javascript:
+	Vamos criar uma função dentro do componente jquery:
+	$(function(){
 	
+	});
+	- Nesta função quando carregar a página ele vai procurar os componentes e faça o tooltip:
+	
+	 	
 	
 	
 	
