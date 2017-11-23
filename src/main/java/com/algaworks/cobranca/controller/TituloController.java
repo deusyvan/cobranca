@@ -46,7 +46,7 @@ public class TituloController {
 			titulos.save(titulo);
 			attributes.addFlashAttribute("mensagem", "Titulo salvo com sucesso!");
 			return "redirect:/titulos/novo";//Redirect para uma url
-		} catch (DataIntegrityViolationException e) {
+		} catch (DataIntegrityViolationException e) {//Tratar valor inválido da data
 			errors.rejectValue("dataVencimento", null, "Formato de data inválida");
 			return CADASTRO_VIEW;
 		}
