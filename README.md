@@ -341,6 +341,11 @@ Para mudar a porta do tomcat:
 	thousands (separador de milhar) no Br é "."
 	allowZero:true para permitir deixar um zero
 	$('.js-currency').maskMoney({decimal: ',', thousands: '.', allowZero: true});
+	- No caso para colocar somente números:
+	$(SELETOR).maskMoney({ thousands: '', allowZero: true, precision: 0 });
+	- Ver este plugin que pode melhorar a questão das datas:
+	https://igorescobar.github.io/jQuery-Mask-Plugin/
+	
 	
 	
 	
