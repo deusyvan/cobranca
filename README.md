@@ -387,3 +387,56 @@ Para mudar a porta do tomcat:
 		public void excluir(Long codigo) {
 				titulos.delete(codigo);
 			}
+
+# RECEBENDO O TÍTULO COM AJAX - PARTE 1
+	- Colcaremos o ícone na página de pesquisa:
+	<a class="btn btn-link btn-xs" title="Receber" rel="tooltip" data-placement="top">
+	   		<span class="glyphicon glyphicon-check"></span>
+	</a>
+	- Trabalharemos com a tag th:if para renderizar o botão somente onde houver pendente:
+	th:if="${titulo.pendente}"
+	- Criaremos uma classe de marcação para executar uma função em nosso cobrança.js:
+	js-atualizar-status
+	- Na função dizemos que qualquer elemento que possuir a a classe vai realizar o seguinte:
+	$('.js-atualizar-status').on('click', function(event){
+	//	alert('clicado!');
+		console.log('clicou');
+	});
+	Apenas mostrando na tela que o ícone foi clicado.
+	- Vamos definir uma url para chamar no controle, uma que recebe o status
+	No Controller precisamos saber qual é a url:
+	@RequestMapping(value="????url????")
+	public void receber(Long codigo) {
+		
+	}
+	- Tal url seria mais ou menos assim:
+	th:rel="/titulos/{codigo}/receber"
+	Uma atualização em titulos pelo codigo que será receber. Não será via "GET" e sim "PUT", JS e AJAX
+	- Aproveitando o thymeleaf usando o codigo que é um parametro variável:
+	th:rel="@{/titulos/{codigo}/receber(codigo=${titulo.codigo})}"
+	- A url estando correta, mas ainda não foi mapeada, se clicar vai dar erro 404, no js vamos tirar
+	o comportamento default do link através do event para não encaminhar aquele link:
+	event.preventDefault();
+	- Vamos pegar no botão a url através do link no nosso js:
+	var botaoReceber = $(event.currentTarget); //Botão
+	var urlReceber = botaoReceber.attr('href'); //Url
+	Com essa url vamos fazer a requisição ajax.
+	- Diferença entre event.relatedTarget  e event.currentTarget:
+	O relatedTarget seria o elemento que perdeu a ação que o elemento atual está recebendo:
+	http://jsfiddle.net/uTe99/229/
+	- Inserir uma mensagem para aparecer ao lado da interrogação do alert: ! Mensagem de alerta:
+	<div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
+	    <div>
+			<span class="glyphicon glyphicon-exclamation-sign"></span>
+			<div th:each="detailedError : ${#fields.detailedErrors()}" th:remove="tag">
+				<span th:text="${detailedError.message}"></span>
+			</div>
+	    </div>
+	</div>
+	- Atalhos do eclipse: 
+	http://blog.algaworks.com/atalhos-e-configuracoes-para-ganhar-produtividade-com-eclipse/
+	
+	
+	
+	
+	
