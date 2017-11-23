@@ -375,35 +375,15 @@ Para mudar a porta do tomcat:
 				return CADASTRO_VIEW;
 			}
 	- Ou seja passamos uma regra de capturar uma excessão da DAO DataIntegrityViolationException que está relacionado a banco de dados de baixo nível e lançamos uma de alto nível para a camada do controller trabalhar.
-	x
-	
-	
-	
-	
-		
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-	
-	
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
+	- Vamos também passar o excluir, retirando o delete do controller e levando ao service:
+		Controller:
+		@RequestMapping(value="{codigo}", method = RequestMethod.DELETE)
+		public String excluir(@PathVariable Long codigo, RedirectAttributes attributes) {
+			cadastroTituloService.excluir(codigo);
+			attributes.addFlashAttribute("mensagem", "Titulo excluído com sucesso!");
+			return "redirect:/titulos";
+		}
+		Service:
+		public void excluir(Long codigo) {
+				titulos.delete(codigo);
+			}

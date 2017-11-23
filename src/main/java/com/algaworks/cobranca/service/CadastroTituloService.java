@@ -20,4 +20,8 @@ public class CadastroTituloService {
 			throw new IllegalArgumentException("Formato de data inválido!.");
 		}
 	}
+
+	public void excluir(Long codigo) {
+		titulos.delete(codigo);
+	}
 }
