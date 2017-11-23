@@ -1,6 +1,7 @@
 package com.algaworks.cobranca.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import com.algaworks.cobranca.model.Titulo;
@@ -13,6 +14,10 @@ public class CadastroTituloService {
 	private Titulos titulos;
 	
 	public void salvar(Titulo titulo) {
-		titulos.save(titulo);
+		try {
+			titulos.save(titulo);
+		} catch (DataIntegrityViolationException e) {
+			throw new IllegalArgumentException("Formato de data inválido!.");
+		}
 	}
 }

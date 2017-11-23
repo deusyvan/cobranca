@@ -352,11 +352,29 @@ Para mudar a porta do tomcat:
 	- Evitar colocar regras no controller
 	- Quando se faz uma consulta no repositorio e daí não vai fazer mais nada lá na frente, podemos colocar no controle para excutar, mas se tiver mais iterações, claro mai para o service.
 	- Criamos nossa classe de serviço anotada com @Service para indicar que esta classe é um serviço e que possui regras de negócio.
-	- Injetamos o serviço no controller:
+	- Injetamos o serviço no controller, para o Spring conseguir injetar:
 	@Autowired
 	private CadastroTituloService cadastroTituloService;
 	- A anotação na classe é para que o spring localize o serviço e fazer alguma coisa, tem que ter no mínimo uma anotação como a @Component para poder conseguir injetar, mas como sendo uma classe de serviço: @Service.
-	
+	- Passamos a mudar de titulos.save para cadastroTituloService.salvar ou seja passando o isso ao serviço.
+	- Melhorando o código vamos pegar a excessão para o método salvar em service:
+		public void salvar(Titulo titulo) {
+			try {
+				titulos.save(titulo);
+			} catch (DataIntegrityViolationException e) {
+				throw new IllegalArgumentException("Formato de data inválido!.");
+			}
+		}
+	- Como não temos nenhuma regra específica para salvar o título então passamos a excessão para o método salvar no service e lançamos uma excessão IllegalArgumentException que é capturada no controller e a msg do serviço:
+		try {
+				cadastroTituloService.salvar(titulo);//Chamando a camada de serviço
+				attributes.addFlashAttribute("mensagem", "Titulo salvo com sucesso!");
+				return "redirect:/titulos/novo";//Redirect para uma url
+			} catch (IllegalArgumentException e) {//Passamos a buscar o IllegalArgumentException
+				errors.rejectValue("dataVencimento", null, e.getMessage());
+				return CADASTRO_VIEW;
+			}
+	- Ou seja passamos uma regra de capturar uma excessão da DAO DataIntegrityViolationException que está relacionado a banco de dados de baixo nível e lançamos uma de alto nível para a camada do controller trabalhar.
 	x
 	
 	
