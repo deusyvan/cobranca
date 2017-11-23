@@ -18,6 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.algaworks.cobranca.model.StatusTitulo;
 import com.algaworks.cobranca.model.Titulo;
 import com.algaworks.cobranca.repository.Titulos;
+import com.algaworks.cobranca.service.CadastroTituloService;
 
 @Controller
 @RequestMapping("/titulos")
@@ -27,6 +28,9 @@ public class TituloController {
 	
 	@Autowired
 	private Titulos titulos;
+	
+	@Autowired
+	private CadastroTituloService cadastroTituloService;
 	
 	@RequestMapping("novo")
 	public ModelAndView novo() {
@@ -43,7 +47,7 @@ public class TituloController {
 		}
 		
 		try {
-			titulos.save(titulo);
+			titulos.save(titulo);//Chamando a camada de serviço
 			attributes.addFlashAttribute("mensagem", "Titulo salvo com sucesso!");
 			return "redirect:/titulos/novo";//Redirect para uma url
 		} catch (DataIntegrityViolationException e) {//Tratar valor inválido da data

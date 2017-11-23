@@ -346,6 +346,18 @@ Para mudar a porta do tomcat:
 	- Ver este plugin que pode melhorar a questão das datas:
 	https://igorescobar.github.io/jQuery-Mask-Plugin/
 	
+# CAMADA DE SERVIÇO
+	- Adicionando a camada de serviço: Regras de negócio
+	Fica entre o controller e acessar o repositório.
+	- Evitar colocar regras no controller
+	- Quando se faz uma consulta no repositorio e daí não vai fazer mais nada lá na frente, podemos colocar no controle para excutar, mas se tiver mais iterações, claro mai para o service.
+	- Criamos nossa classe de serviço anotada com @Service para indicar que esta classe é um serviço e que possui regras de negócio.
+	- Injetamos o serviço no controller:
+	@Autowired
+	private CadastroTituloService cadastroTituloService;
+	- A anotação na classe é para que o spring localize o serviço e fazer alguma coisa, tem que ter no mínimo uma anotação como a @Component para poder conseguir injetar, mas como sendo uma classe de serviço: @Service.
+	
+	x
 	
 	
 	
