@@ -41,7 +41,7 @@
 				<div class="form-group" th:classappend="${#fields.hasErrors('valor')} ? has-error">
 					<label for="valor" class="col-sm-2 control-label">Valor</label>
 					<div class="col-sm-2">   
-						<input type="text" class="form-control" id="valor" th:field="*{valor}"/>
+						<input type="text" class="form-control js-currency" id="valor" th:field="*{valor}"/>
 					</div>
 				</div>
 				<div class="form-group">

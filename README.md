@@ -326,8 +326,26 @@ Para mudar a porta do tomcat:
 	- Agora vamos tratar a DataException:
 		- Primeiro no metodo salvar (controller) vamos colocar em volta de um try cath,
 		
+# 	MÁSCARA DE ENTRADA DE VALORES
+	- Vamos baixar o jquery:
+	https://github.com/plentz/jquery-maskmoney/tree/master/dist
+	- Importar no LayoutPadrão:
+	<script src="/js/jquery.maskMoney.min.js"></script>
+	- Na documentação vemos como se faz a chamada que é por um id da tag no html,
+	mas iremos fazer a chamada por uma classe css.
+	<input type="text" class="form-control js-currency" id="valor" th:field="*{valor}"/>
+	- js-currency: Classe de marcação que poderá ser chamada por um js.
+	- No js onde: $('.js-currency').maskMoney(); quer dizer encontre todas as classes com esse nome
+	e passe a função maskMoney(), e ainda iremos passar algumas opções, onde no demo podemos ver esses exemplos: 
+	decimal no Br é ","
+	thousands (separador de milhar) no Br é "."
+	allowZero:true para permitir deixar um zero
+	$('.js-currency').maskMoney({decimal: ',', thousands: '.', allowZero: true});
 	
 	
+	
+	
+		
 	
 	
 	
