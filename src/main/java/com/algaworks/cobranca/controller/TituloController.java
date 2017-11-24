@@ -78,9 +78,10 @@ public class TituloController {
 		return "redirect:/titulos";
 	}
 	
-	@RequestMapping(value="????url????")
-	public void receber(Long codigo) {
-		
+	@RequestMapping(value="/{codigo}/receber", method = RequestMethod.PUT)
+	public String receber(@PathVariable Long codigo) {
+		System.out.println(">>>> codigo: " + codigo);
+		return "OK";
 	}
 	
 	@ModelAttribute("todosStatusTitulo")

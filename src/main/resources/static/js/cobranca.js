@@ -29,5 +29,15 @@ $(function(){
 		var botaoReceber = $(event.currentTarget);
 		var urlReceber = botaoReceber.attr('href');
 	//	console.log('urlReceber', urlReceber);
+		
+		var response = $.ajax({
+								url: urlReceber,
+								type: 'PUT', //Para uma atualização
+								
+						});
 	});
 });
+
+
+
+

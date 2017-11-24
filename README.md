@@ -436,6 +436,34 @@ Para mudar a porta do tomcat:
 	- Atalhos do eclipse: 
 	http://blog.algaworks.com/atalhos-e-configuracoes-para-ganhar-produtividade-com-eclipse/
 	
+# RECEBENDO O TÍTULO COM AJAX - PARTE 2
+	- Vamos entrar no jquery com ajax para receber no servidor a requisição através de controle via ajax:
+	$.ajax({
+			
+		});
+	- Essa função vai devolver um objeto que chamaremos de response:
+	var response = $.ajax({
+			
+						});
+	- Poderemos adicinar outras funções se der certo ou errado, para configurar precisamos de alguns parametros:
+	url : onde vai enviar a requisição
+	type:  tipo da requisição (via PUT, POST, GET):
+	url: urlReceber,
+	type: 'PUT',
+	- No controller vamos dizer como vamos tratar através do método:
+	@RequestMapping(value="/{codigo}/receber", method = RequestMethod.PUT)
+	public String receber(@PathVariable Long codigo) {
+		System.out.println(">>>> codigo: " + codigo);
+		return "OK";
+	}
+	Mostrando no console o codigo, prova que chegou no servidor e retornando um erro pois não existe 
+	a view OK.
+	- Mas como não vamos mandar para uma outra view nem mesmo para a mesma tela, porque estamos fazendo
+	uma requisição via ajax, o que quero receber de volta é uma mensagem que deu certo ou alguma
+	informação que desejamos atualizar na tela, então para não retornar uma view e retornar apenas uma
+	string que eu consiga trabalhar no JS iremos fazer uma anotação @ResponseBody:
+	
+	
 	
 	
 	
