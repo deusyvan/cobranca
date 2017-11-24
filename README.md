@@ -500,6 +500,13 @@ Para mudar a porta do tomcat:
 	data-role
 	Significa que a regra para escolhermos esse cara é pelo código:
 	"data-role=${titulo.codigo}"
+	- Com isso agora podemos usá-lo no nosso js para atualizar o html, vamos selecionar o codigo 
+	colocando o titulo.codigo tambem no botao, para não precisarmos recuperar ele pela url, fazendo um
+	parse:
+	th:attr="data-codigo=${titulo.codigo}"
+	- Então recuperamos ele mais facilmente pelo botão receber:
+	var codigoTitulo = botaoReceber.data('codigo');
+	
 	 
 	
 	

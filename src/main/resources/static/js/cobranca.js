@@ -36,6 +36,7 @@ $(function(){
 								
 						});
 		response.done(function(e){
+			var codigoTitulo = botaoReceber.data('codigo');
 			botaoReceber.hide();
 		});
 		

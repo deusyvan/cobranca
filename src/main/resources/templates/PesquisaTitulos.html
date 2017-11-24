@@ -53,6 +53,7 @@
 	   						</a>
 	   						<a class="btn btn-link btn-xs js-atualizar-status" th:if="${titulo.pendente}"
 	   							title="Receber" rel="tooltip" data-placement="top"
+	   							th:attr="data-codigo=${titulo.codigo}"
 	   							th:href="@{/titulos/{codigo}/receber(codigo=${titulo.codigo})}">
 	   							<span class="glyphicon glyphicon-check"></span>
 	   						</a>
