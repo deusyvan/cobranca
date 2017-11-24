@@ -569,7 +569,25 @@ Para mudar a porta do tomcat:
 	- Corrigindo o input e colocando o placeholder="" e o autofocus=""
 	<input class="form-control" placeholder="Qual o título você está procurando?" 	autofocus="autofocus"></input>
 
-# 
+# IMPLEMENTANDO A PESQUISA
+	- No método pesquisar precisamos receber uma string "descrição" colocando no input:
+	name="descricao"
+	- No Controlador colocamos como parâmetro no método pesquisar para recebermos a descrição:
+	public ModelAndView pesquisar(String descricao) { ...
+	- Não vamos mais precisar do findAll, no spring data JPA temos um recurso de criar uma pesquisa conforme a documentação de referência:
+	https://docs.spring.io/spring-data/jpa/docs/2.0.1.RELEASE/reference/html/
+	Podemos ver as várias possibilidades de pesquisa: 
+	https://docs.spring.io/spring-data/jpa/docs/2.0.1.RELEASE/reference/html/#jpa.query-methods
+	Temos na interface uma descrição do método, o spring data jpa vai montar a consulta de acordo com a consulta montada
+	vemos uma tabela com estas formas. Vários padrões para seguir.
+	- Vamos usar no repositorio Titulos a procura pela descrição contendo em qualquer posição a string de parametro:
+	public List<Titulo> findByDescricaoContaining(String descricao);
+	- Lançaremos no nosso controller no lugar de findAll:
+	titulos.findByDescricaoContaining(descricao);
+	
+	
+	
+	
 	
 	
 	 
