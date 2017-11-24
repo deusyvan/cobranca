@@ -508,6 +508,8 @@ Para mudar a porta do tomcat:
 	var codigoTitulo = botaoReceber.data('codigo');
 	- Levamos o seletor para o td que iremos trabalhar:
 	$('[data-role=' + codigoTitulo + ']');
+	Substituindo por uma função html alterando nossa página:
+	$('[data-role=' + codigoTitulo + ']').html('<span class="label label-success">Recebido</span>');
 	 
 	
 	

@@ -37,7 +37,7 @@ $(function(){
 						});
 		response.done(function(e){
 			var codigoTitulo = botaoReceber.data('codigo');
-			$('[data-role=' + codigoTitulo + ']');
+			$('[data-role=' + codigoTitulo + ']').html('<span class="label label-success">Recebido</span>');
 			botaoReceber.hide();
 		});
 		
