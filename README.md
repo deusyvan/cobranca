@@ -550,6 +550,24 @@ Para mudar a porta do tomcat:
 # STATUS SELECIONADO NA EDIÇÃO
 	- Apenas faltava o th:field
 	
+# PROTÓTIPO DA CAIXA DE PESQUISA
+	- Inserindo uma caixinha, campo de busca para a pesquisa que será submetido por um formulário via get:
+		<form action="GET" class="form-horizontal">
+	   			<div class="form-group">
+	   				<div class="col-sm-4">
+	   					<div class="input-group">
+	   						<input></input>
+	   						<span class="input-group-btn">
+	   							<button type="submit" class="btn btn-default">
+	   								<i class="glyphicon glyphicon-search"></i>
+	   							</button>
+	   						</span>
+	   					</div>
+	   				</div>
+	   			</div>
+	   		</form>
+	- 
+	
 	
 	 
 	
