@@ -510,6 +510,27 @@ Para mudar a porta do tomcat:
 	$('[data-role=' + codigoTitulo + ']');
 	Substituindo por uma função html alterando nossa página:
 	$('[data-role=' + codigoTitulo + ']').html('<span class="label label-success">Recebido</span>');
+	- Para tirarmos o valor statico "Recebido" pegaremos ele do java. 
+	- Através da string que o servidor nos retorna "OK" iremos receber do parametro da função o "e":
+	response.done(function(e){ ...
+	E concatenamos ele no html que vamos atualizar:
+	$('[data-role=' + codigoTitulo + ']').html('<span class="label label-success">' + e + '</span>');
+	- No Controller, ao invés de retornar o "OK" vamos fazer com que o service retorne isso pra gente:
+	@RequestMapping(value="/{codigo}/receber", method = RequestMethod.PUT)
+	public @ResponseBody String receber(@PathVariable Long codigo) {
+		return cadastroTituloService.receber(codigo);
+	}
+	- Alteramos então o service pra retornar nossa string:
+	public String receber(Long codigo) {
+		Titulo titulo = titulos.findOne(codigo);
+		titulo.setStatus(StatusTitulo.RECEBIDO);
+		titulos.save(titulo);
+		
+		return StatusTitulo.RECEBIDO.getDescricao();
+	}
+	- Também podemos recuperar a string assim:
+	return titulo.getStatus().getDescricao();
+	
 	 
 	
 	
