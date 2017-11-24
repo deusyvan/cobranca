@@ -35,6 +35,14 @@ $(function(){
 								type: 'PUT', //Para uma atualização
 								
 						});
+		response.done(function(e){
+			
+		});
+		
+		response.fail(function(e){
+			console.log(e);
+			alert('Erro recebendo a cobrança');
+		});
 	});
 });
 

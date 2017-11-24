@@ -480,6 +480,16 @@ Para mudar a porta do tomcat:
 	}
 	Com isso conseguimos ir no banco e atualizar status, mas para ver isso precisamos dar um refresh na
 	tela para ver essa atualização.
+	- Vamos fazer com que o js atualize o status na página automaticamente.
+	- No js se deu certo vamos pegar o response e implementar uma função:
+	response.done(function(e){
+			
+		});
+	- Se deu errado implementamos outra função:
+	response.fail(function(e){
+			
+		});
+	 
 	
 	
 	
