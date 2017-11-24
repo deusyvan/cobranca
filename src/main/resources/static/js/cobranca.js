@@ -36,7 +36,7 @@ $(function(){
 								
 						});
 		response.done(function(e){
-			
+			botaoReceber.hide();
 		});
 		
 		response.fail(function(e){

@@ -489,7 +489,11 @@ Para mudar a porta do tomcat:
 	response.fail(function(e){
 			
 		});
-	 
+	- Para a falha:
+	console.log(e);
+	alert('Erro recebendo a cobrança');
+	- Para o sucesso, atualizaremos o status e ocultamos o botão de receber:
+			 
 	
 	
 	
