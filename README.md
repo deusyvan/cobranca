@@ -469,6 +469,20 @@ Para mudar a porta do tomcat:
 	O Spring entende com isso que estamos querendo apenas retornar essa string como o corpo da resposta
 	e não uma view.
 	- Retornando uma string "OK" e podemos ter ainda mais parametros tambem.
+	- Passaremos a regra de atualizar o status para um serviço:
+	cadastroTituloService.receber(codigo);
+	- No Service implementamos essa regra recuperando o titulo que tem o codigo, alterando o status e
+	salvando o titulo:
+	public void receber(Long codigo) {
+		Titulo titulo = titulos.findOne(codigo);
+		titulo.setStatus(StatusTitulo.RECEBIDO);
+		titulos.save(titulo);
+	}
+	Com isso conseguimos ir no banco e atualizar status, mas para ver isso precisamos dar um refresh na
+	tela para ver essa atualização.
+	
+	
+	
 	
 	
 	

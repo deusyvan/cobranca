@@ -81,7 +81,7 @@ public class TituloController {
 	
 	@RequestMapping(value="/{codigo}/receber", method = RequestMethod.PUT)
 	public @ResponseBody String receber(@PathVariable Long codigo) {
-		System.out.println(">>>> codigo: " + codigo);
+		cadastroTituloService.receber(codigo);
 		return "OK";
 	}
 	
