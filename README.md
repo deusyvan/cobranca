@@ -547,6 +547,9 @@ Para mudar a porta do tomcat:
 	dizer "caso a expressão do lado esquerdo não exista, use a do lado direito", ou seja, caso Brewer
 	não esteja já inicializado (em outro arquivo por exemplo), iniciamos um novo objeto {}.
 	
+# STATUS SELECIONADO NA EDIÇÃO
+	- Apenas faltava o th:field
+	
 	
 	 
 	
