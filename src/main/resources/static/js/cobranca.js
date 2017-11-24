@@ -37,6 +37,7 @@ $(function(){
 						});
 		response.done(function(e){
 			var codigoTitulo = botaoReceber.data('codigo');
+			$('[data-role=' + codigoTitulo + ']');
 			botaoReceber.hide();
 		});
 		

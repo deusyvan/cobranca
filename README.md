@@ -506,7 +506,8 @@ Para mudar a porta do tomcat:
 	th:attr="data-codigo=${titulo.codigo}"
 	- Então recuperamos ele mais facilmente pelo botão receber:
 	var codigoTitulo = botaoReceber.data('codigo');
-	
+	- Levamos o seletor para o td que iremos trabalhar:
+	$('[data-role=' + codigoTitulo + ']');
 	 
 	
 	
