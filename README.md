@@ -462,6 +462,14 @@ Para mudar a porta do tomcat:
 	uma requisição via ajax, o que quero receber de volta é uma mensagem que deu certo ou alguma
 	informação que desejamos atualizar na tela, então para não retornar uma view e retornar apenas uma
 	string que eu consiga trabalhar no JS iremos fazer uma anotação @ResponseBody:
+	public @ResponseBody String receber(@PathVariable Long codigo) {
+		System.out.println(">>>> codigo: " + codigo);
+		return "OK";
+	}
+	O Spring entende com isso que estamos querendo apenas retornar essa string como o corpo da resposta
+	e não uma view.
+	- Retornando uma string "OK" e podemos ter ainda mais parametros tambem.
+	
 	
 	
 	
