@@ -584,6 +584,12 @@ Para mudar a porta do tomcat:
 	public List<Titulo> findByDescricaoContaining(String descricao);
 	- Lançaremos no nosso controller no lugar de findAll:
 	titulos.findByDescricaoContaining(descricao);
+	- Com isso teremos um erro na página pois não aceita valor null para o parametro passado quando tentamos acessar a página.
+	- Uma excessão é lançada pela descrição não poder ser nula, então o default do requestparam senão colocar nada ele é obrigatório.
+	- Então anotamos com @RequestParam e podemos colocar requerid=false ou defaultValue = "%" para se não tiver a string ele vai
+	fazer uma consulta com o %:
+	public ModelAndView pesquisar(@RequestParam(defaultValue = "%") String descricao) { ...
+	 
 	
 	
 	
