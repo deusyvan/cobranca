@@ -530,6 +530,23 @@ Para mudar a porta do tomcat:
 	}
 	- Também podemos recuperar a string assim:
 	return titulo.getStatus().getDescricao();
+	- Outras consultas ajax:
+	//Consulta o webservice viacep.com.br/
+    $.getJSON("//viacep.com.br/ws/"+ cep +"/json/?callback=?", function(data){
+            if (!("erro" in data)) {
+                       // Aqui atualizar os campos do formulario
+                       // Logradouro, Bairro, Municipio.... 
+            			alert("Logradouro", data.logradouro );
+            		} else {
+            			alert("CEP não encontrado.");
+            		}
+     });
+	- Significado de:
+	var Brewer = Brewer || {};
+	Esse é o operador "ou" normal mesmo, o que ele faz na inicialização da variável do JavaScript é
+	dizer "caso a expressão do lado esquerdo não exista, use a do lado direito", ou seja, caso Brewer
+	não esteja já inicializado (em outro arquivo por exemplo), iniciamos um novo objeto {}.
+	
 	
 	 
 	
