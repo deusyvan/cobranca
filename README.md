@@ -569,7 +569,7 @@ Para mudar a porta do tomcat:
 	- Corrigindo o input e colocando o placeholder="" e o autofocus=""
 	<input class="form-control" placeholder="Qual o título você está procurando?" 	autofocus="autofocus"></input>
 
-
+# 
 	
 	
 	 
