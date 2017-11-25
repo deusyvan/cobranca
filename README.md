@@ -589,8 +589,40 @@ Para mudar a porta do tomcat:
 	- Então anotamos com @RequestParam e podemos colocar requerid=false ou defaultValue = "%" para se não tiver a string ele vai
 	fazer uma consulta com o %:
 	public ModelAndView pesquisar(@RequestParam(defaultValue = "%") String descricao) { ...
-	 
-	
+	- Melhorando a aplicação vamos usar um objeto filtro que chega na requisição lançado no form:
+	<form method="GET" class="form-horizontal" action="/titulos" th:object="${filtro}">
+	- Neste filtro vamos pegar a descrição, ao invés de name="descricao" para manter na tela alteramos para:
+	<input class="form-control" placeholder="Qual o título você está procurando?"
+	   								autofocus="autofocus" th:field="*{descricao}"></input>
+	Como feito em cadastro.
+	- Com isso alteramos nosso metodo pesquisar para receber um objeto: TituloFilter
+	public ModelAndView pesquisar(TituloFilter filtro) { ...
+	- Criando nosso filter:
+	public class TituloFilter {
+		private String descricao;
+		public String getDescricao() {
+			return descricao;
+		}
+		public void setDescricao(String descricao) {
+			this.descricao = descricao;
+		}
+	}
+	Mesma idéia do Titulo, só que não é uma entidade	para persistir no banco.
+	- Desta forma haverá um erro pois o objeto filtro está chegando null, neste primeiro momento o 
+	erro é na preparação da query, para corrigir iremos fazer uma condição:
+	String descricao = filtro.getDescricao() == null ? "%" : filtro.getDescricao();
+	e repassá-la na lista:
+	List<Titulo> todosTitulos = titulos.findByDescricaoContaining(descricao);
+	A verificação é nescessária para não passar null, e tendo mais campos pra filtrar seria só
+	adicionar no filtro.	
+	- Agora o erro é que não foi dado um BindingResult para um objeto chamado filtro, ou seja, 
+	o objeto não foi mandado para o controller, pois estamos acessando a página e ele não exite.
+	Para corrigir isso vamos fazer com que o spring crie esse objeto automaticamente da mesma forma
+	feita na anotação do método todosStatusTitulo() anotamos no atributo filter:
+	public ModelAndView pesquisar(@ModelAttribute("filtro") TituloFilter filtro) { ...
+	O spring vai dar um new neste objeto simples que será inicializado.	Conseguimos falar para o spring
+	criar esse objeto TituloFilter usando o @ModelAttribute e mantendo os dados no formulário.
+	á
 	
 	
 	
