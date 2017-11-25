@@ -622,8 +622,26 @@ Para mudar a porta do tomcat:
 	public ModelAndView pesquisar(@ModelAttribute("filtro") TituloFilter filtro) { ...
 	O spring vai dar um new neste objeto simples que será inicializado.	Conseguimos falar para o spring
 	criar esse objeto TituloFilter usando o @ModelAttribute e mantendo os dados no formulário.
-	á
+	- Vamos tirar esse serviço da camada de controller e passar para a camada de serviço.
+	- Criamos o metodo no serviço:
+	public List<Titulo> filtrar(TituloFilter filtro){
 	
+	}
+	- Retiramos do controller a verificação e o passamos como retorno no serviço:
+		String descricao = filtro.getDescricao() == null ? "%" : filtro.getDescricao();
+		return titulos.findByDescricaoContaining(descricao);	
+	- No controller passamos a chamar a lista através do serviço:
+	List<Titulo> todosTitulos = cadastroTituloService.filtrar(filtro);
+	Obs: no controller não usaremos mais a injeção de titulos.
+	- Mais detalhes de funcionamento do Spring Data JPA:
+	http://blog.algaworks.com/spring-data-jpa/
+	- Referências de paginação:
+	http://docs.spring.io/spring-data/commons/docs/current/reference/html/#core.web.basic.paging-and-sorting
+	http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.special-parameters
+	- Para colocar o cursor no final da pes	quisa:
+	http://stackoverflow.com/questions/19568041/set-focus-and-cursor-to-end-of-text-input-field-string-w-jquery
+	
+		
 	
 	
 	
