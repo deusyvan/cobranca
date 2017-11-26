@@ -641,7 +641,12 @@ Para mudar a porta do tomcat:
 	- Para colocar o cursor no final da pes	quisa:
 	http://stackoverflow.com/questions/19568041/set-focus-and-cursor-to-end-of-text-input-field-string-w-jquery
 	
-		
+# CONTEXT PATH NO TOMCAT EXTERNO
+	- Run as >> Maven build... 
+	Clean package para gerar WAR
+	- <finalName>${project.artifactId}</finalName> no pom para simplificar o nome do war
+	- Mapear e redirecionar acesso ao "/":
+			
 	
 	
 	
