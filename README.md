@@ -648,6 +648,19 @@ Para mudar a porta do tomcat:
 	- Arrumando os links:
 	th:href="@{/css/bootstrap.min.css}"
 	th:src="@{/js/jquery-2.1.4.min.js}"
+	- Mapear e redirecionar o "/" para "/titulos":	
+	Podemos fazer isso no controller, mas iremos fazer uma pequena customização do Spring Boot:
+	Vamos criar uma classe estática em CobrancaApplication anotada com @Configuration que vai extender de  WebMvcConfigurerAdapter e adicionamos o redirect e o controller, toda vez que mandar para a barra direcionamos para onde quisermos, subscrevendo o método addViewControllers:
+	@Configuration
+	public static class MvcConfig extends WebMvcConfigurerAdapter{
+		@Override
+		public void addViewControllers(ViewControllerRegistry registry) {
+			registry.addRedirectViewController("/", "/titulos");
+		}
+	}
+	
+	
+	
 	
 	
 	
