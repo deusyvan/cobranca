@@ -645,8 +645,10 @@ Para mudar a porta do tomcat:
 	- Run as >> Maven build... 
 	Clean package para gerar WAR
 	- <finalName>${project.artifactId}</finalName> no pom para simplificar o nome do war
-	- Mapear e redirecionar acesso ao "/":
-			
+	- Arrumando os links:
+	th:href="@{/css/bootstrap.min.css}"
+	th:src="@{/js/jquery-2.1.4.min.js}"
+	
 	
 	
 	
