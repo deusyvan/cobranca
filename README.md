@@ -659,8 +659,40 @@ Para mudar a porta do tomcat:
 		}
 	}
 	
-	
-	
+# AJUSTES RESPONSIVOS
+	- Ajustes no CSS, para melhorar nossa aplicação pra funcionar no celular.
+	- Acrescentamos duas tags no LayoutPadrão:
+	<meta http-equiv="Content-Type" content="text/html; charset-UTF-8"/>
+	<meta name="viewport" content="width-device-width"/>
+	- Colocar o css:
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+	- No CSS:
+	- Tela no mínimo com 768px:
+		/* Tela grande */
+		@media (min-width: 768px){
+				.panel-default {
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+				.alert {
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+		
+		}
+	- Agora arrumando a tabela, vamos colocá-la dentro de uma div:
+	<div class="table-responsive">
+	- Exportar arquivo tipo .jar:
+	O Spring e o Tomcat podem ir embarcados em um jar exportado.
+	Basicamente é: exporte o jar com o Maven usando o "goal" package.
+	Irá ser gerado um arquivo .jar.
+	Depois em outro computador, você pode executar na linha de comando: java -jar cobranca.jar
+	Veja aqui na documentação: 
+	https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-first-application.html#getting-started-first-application-executable-jar
+
+# CONCLUSÃO
+	- 
 	
 	
 	
