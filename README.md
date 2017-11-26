@@ -692,7 +692,8 @@ Para mudar a porta do tomcat:
 	https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-first-application.html#getting-started-first-application-executable-jar
 
 # CONCLUSÃO
-	- 
+	- Nunca pare de estudar!
+	- Tente, tente, tente... nunca desista!
 	
 	
 	
