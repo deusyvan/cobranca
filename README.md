@@ -690,6 +690,16 @@ Para mudar a porta do tomcat:
 	Depois em outro computador, você pode executar na linha de comando: java -jar cobranca.jar
 	Veja aqui na documentação: 
 	https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-first-application.html#getting-started-first-application-executable-jar
+	- Spring Security Livro:
+	http://cafe.algaworks.com/livro-spring-boot/
+	Pode já ir direto na parte de segurança, não precisa ler o e-book todo. Depois que
+	fizer o que o e-book ensina, você dá uma olhada nesse artigo aqui:
+	http://blog.algaworks.com/spring-security/
+	... que vai encontrar mais detalhes ainda, para configurar no sistema.
+	- Nuven:
+	Heroku, AWS, OpenShift, etc.
+	- "logging.level.root=DEBUG"
+	
 
 # CONCLUSÃO
 	- Nunca pare de estudar!
